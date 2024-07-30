@@ -1,3 +1,8 @@
-from django.shortcuts import render
+# Airline Flight
+# Created by Maximillian M. Estrada on 2024-07-30
 
-# Create your views here.
+from django.views.generic import TemplateView
+
+
+class DashboardView(TemplateView):
+    template_name = 'core/index.html'

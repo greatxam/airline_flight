@@ -1,8 +1,16 @@
 # Airline Flight
 
 ## [Unreleased]
-- Admin Site
+- Dashboard Site
 - Flight Page
+
+## [0.0.4] - 2024-07-30
+### Added
+- Bootstrap
+- Dashboard
+- Navbar menu
+- Sidebar menu
+- Static files
 
 ## [0.0.3] - 2024-07-30
 ### Added
