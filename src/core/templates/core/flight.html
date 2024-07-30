@@ -1,0 +1,35 @@
+{% extends "core/base_dashboard.html" %}
+{% load i18n static %}
+
+{% block title %}
+	Flights
+{% endblock title %}
+
+{% block main-content %}
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Flights</h1>
+    </div>
+
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Aricraft</th>
+					<th scope="col">Origin</th>
+					<th scope="col">Destination</th>
+					<th scope="col">Flight Time</th>
+				</tr>
+			</thead>
+			<tbody>
+            {% for flight in object_list %}
+				<tr>
+					<th scope="row">{{ flight.aircraft.name }}</th>
+					<td>{{ flight.origin.name }}</td>
+					<td>{{ flight.destination.name }}</td>
+					<td>{{ flight.flight_time }}</td>
+				</tr>
+            {% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock main-content %}
