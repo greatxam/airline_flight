@@ -11,4 +11,9 @@ urlpatterns = [
         '',
         DashboardView.as_view(),
         name='core-dashboard'),
+    # flight
+    path(
+        'flights/',
+        FlightView.as_view(),
+        name='core-flight'),
 ]

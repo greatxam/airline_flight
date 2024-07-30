@@ -4,6 +4,10 @@
 - Dashboard Site
 - Flight Page
 
+## [0.0.5] - 2024-07-30
+### Added
+- Flight page
+
 ## [0.0.4] - 2024-07-30
 ### Added
 - Bootstrap
