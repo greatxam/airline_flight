@@ -15,4 +15,14 @@ class AircraftAdmin(admin.ModelAdmin):
     ]
 
 
+@admin.register(Airport)
+class AirportAdmin(admin.ModelAdmin):
+    list_display = [
+        'name',
+    ]
+    search_fields = [
+        'name',
+    ]
+
+
 admin.site.site_title = admin.site.site_header = "Airline Flight"
