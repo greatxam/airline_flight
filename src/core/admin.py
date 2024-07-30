@@ -25,4 +25,24 @@ class AirportAdmin(admin.ModelAdmin):
     ]
 
 
+@admin.register(Flight)
+class FlightAdmin(admin.ModelAdmin):
+    list_display = [
+        'aircraft',
+        'origin',
+        'destination',
+        'flight_time',
+    ]
+    search_fields = [
+        'aircraft__name',
+        'origin__name',
+        'destination__name',
+    ]
+    list_filter = [
+        'aircraft',
+        'origin',
+        'destination',
+    ]
+
+
 admin.site.site_title = admin.site.site_header = "Airline Flight"

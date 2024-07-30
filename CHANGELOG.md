@@ -2,10 +2,12 @@
 
 ## [Unreleased]
 - Admin Site
-- Aircraft Module
-- Airport Module
-- Flight Module
 - Flight Page
+
+## [0.0.3] - 2024-07-30
+### Added
+- Flight model
+- Flight admin
 
 ## [0.0.2] - 2024-07-30
 ### Added

@@ -45,3 +45,31 @@ class Airport(BaseAbstract):
 
     def __str__(self):
         return self.name
+
+
+class Flight(BaseAbstract):
+    class Meta:
+        db_table = 'core_flights'
+        ordering = ['created']
+
+    aircraft = models.ForeignKey(
+        'Aircraft',
+        on_delete=models.CASCADE)
+    origin = models.ForeignKey(
+        'Airport',
+        related_name='origin',
+        on_delete=models.CASCADE)
+    destination = models.ForeignKey(
+        'Airport',
+        related_name='destination',
+        on_delete=models.CASCADE)
+    departure = models.DateTimeField()
+    arrival = models.DateTimeField()
+    flight_time = models.DurationField()
+
+    def save(self, *args, **kwargs):
+        self.flight_time = self.arrival - self.departure
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.aircraft.name}: {self.origin.name} - {self.destination.name}"
