@@ -33,3 +33,15 @@ class Aircraft(BaseAbstract):
     def __str__(self):
         return self.name
 
+
+class Airport(BaseAbstract):
+    class Meta:
+        db_table = 'core_airports'
+        ordering = ['name']
+
+    name = models.CharField(
+        unique=True,
+        max_length=100)
+
+    def __str__(self):
+        return self.name
