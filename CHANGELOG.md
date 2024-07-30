@@ -2,7 +2,10 @@
 
 ## [Unreleased]
 - Dashboard Site
-- Flight Page
+
+## [0.0.6] - 2024-07-30
+### Added
+- Flight form
 
 ## [0.0.5] - 2024-07-30
 ### Added
