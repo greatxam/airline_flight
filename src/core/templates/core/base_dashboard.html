@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+{% load i18n static %}
+
+{% block header %}
+	{% include 'core/includes/navbar.html' %}
+{% endblock header %}
+
+{% block sidebar %}
+	{% include 'core/includes/sidebar.html' %}
+{% endblock sidebar %}
+
+{% block main %}
+	<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+		{% block main-content %}
+			<h1>Dashboard</h1>
+		{% endblock main-content %}
+	</main>
+{% endblock main %}
+
+{% block stylesheets %}
+	<link href="{% static 'core/css/dashboard.css' %}" rel="stylesheet" />
+{% endblock stylesheets %}
